@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #0b0d10;
+  color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Header */
+
+header {
+  height: 56px;
+  padding: 0 32px;
+  border-bottom: 1px solid #222;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.logo {
+  color: #f2f2f2;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 8px;
+}
+
+nav a {
+  color: #999;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+nav a:hover,
+nav a.active {
+  color: #0b0d10;
+  background: #7dd3fc;
+}
+
+/* Layout */
+
+main {
+  min-height: calc(100vh - 56px);
+  padding: 40px 32px;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 28px;
+}
+
+/* Intro */
+
+.intro {
+  max-width: 720px;
+}
+
+.label {
+  color: #7dd3fc;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: clamp(40px, 7vw, 72px);
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.description {
+  color: #aaa;
+  font-size: 16px;
+}
+
+/* Content */
+
+.content {
+  min-height: 260px;
+  padding: 24px;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content p {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* Mobile */
+
+@media (max-width: 640px) {
+  header {
+    height: auto;
+    padding: 18px 20px;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  main {
+    min-height: auto;
+    padding: 32px 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main,
+section,
+.content {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.clickable {
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.clickable:hover {
+  opacity: 0.8;
+}
+
+.footer {
+  color: #777;
+  font-size: 15px;
+}
+
+.footer a {
+  color: #999;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #7dd3fc;
+}
