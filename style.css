@@ -150,15 +150,31 @@ nav {
 }
 
 .footer {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+
   color: #777;
-  font-size: 15px;
+  font-size: 13px;
 }
 
-.footer a {
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
   color: #999;
   text-decoration: none;
+
+  transition: 0.15s;
 }
 
-.footer a:hover {
+.footer-link:hover {
   color: #7dd3fc;
+}
+
+.footer-link i {
+  width: 16px;
+  font-size: 14px;
 }
