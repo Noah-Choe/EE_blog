@@ -9,23 +9,72 @@
 
 <body>
   <header>
-    <a class="logo clickable" onclick="window.location.href='index.html'">Project Archive</a>
+    <a class="logo clickable" onclick="window.location.href='index.html'">
+      Project Archive
+    </a>
 
     <nav>
       <a href="ex1.html">EX 1</a>
-      <a href="ex1.html">EX 2</a>
-      <a href="ex1.html">EX 3</a>
-      <a href="ex1.html">EX 4</a>
+      <a href="ex2.html">EX 2</a>
+      <a href="ex3.html">EX 3</a>
+      <a href="ex4.html">EX 4</a>
     </nav>
   </header>
 
   <main>
     <section class="intro">
       <h1>Arduino Project</h1>
+      <h2>Day 1 - Potentiometer</h2>
     </section>
 
     <section class="content">
-      <p></p>
+      <h2>Overview</h2>
+
+      <p>
+        Generating light with an LED using <code>analogWrite()</code> is relatively straightforward.
+        However, because an Arduino continuously executes the <code>loop()</code> function,
+        it can also respond to changing inputs in real time.
+      </p>
+
+      <p>
+        For example, a push button can be used to activate the LED only when desired,
+        while a potentiometer combined with <code>analogRead()</code> allows the system
+        to continuously monitor user input.
+      </p>
+
+      <p>
+        By using the <code>map()</code> function, the analog input range can be scaled
+        to match the LED brightness range, enabling smooth real-time control of the LED's intensity.
+      </p>
+
+      <h2>Code Implementation</h2>
+
+      <p>
+        The code below demonstrates real-time LED brightness control using
+        <code>analogRead()</code>, <code>map()</code>, and <code>analogWrite()</code>.
+      </p>
+
+      <img src="analogread.png" alt="Analog Read code" class="project-image">
+
+      <p>
+        The potentiometer's analog input is read by the Arduino, scaled to an appropriate
+        PWM range using <code>map()</code>, and then passed to <code>analogWrite()</code>
+        to adjust the LED brightness in real time.
+      </p>
+
+      <h2>Video Demonstration</h2>
+
+      <p>
+        A demonstration of the potentiometer in operation can be viewed through the link below.
+      </p>
+
+      <a 
+        class="demo-link"
+        href="https://www.instagram.com/reel/DY_JFV5xov-/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" 
+        target="_blank"
+      >
+        Watch the Potentiometer Demonstration Video
+      </a>
     </section>
   </main>
 </body>
